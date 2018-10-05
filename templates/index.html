@@ -1,0 +1,39 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>=
+    <title>Weather Station</title>
+    <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static "assets/css/main.css" %}"/>
+</head>
+<body>
+		<!-- Header -->
+			<section id="header" class="dark">
+				<header>
+			    <h1>Weather Station - London</h1>
+				</header>
+				<footer>
+                    <ul style="list-style-type:none">
+                        <li>Temperature - {{ data.temp }}<sup>o</sup>C</li>
+                        <li>Minimum Temperature - {{ data.temp_min }}<sup>o</sup>C</li>
+                        <li>Maximum Temperature - {{ data.temp_max }}<sup>o</sup>C</li>
+                        <li>Pressure - {{ data.pressure }} hPa</li>
+                        <li>Humidity - {{ data.humidity }} %</li>
+                        <li>Last Update - {{ data.last_update }}</li>
+                    </ul>
+				</footer>
+			</section>
+
+
+
+		<!-- Scripts -->
+			<script src="{% static "assets/js/jquery.min.js" %}"></script>
+			<script src="{% static "assets/js/jquery.scrolly.min.js" %}"></script>
+			<script src="{% static "assets/js/browser.min.js" %}"></script>
+			<script src="{% static "assets/js/breakpoints.min.js" %}"></script>
+			<script src="{% static "assets/js/util.js" %}"></script>
+			<script src="{% static "assets/js/main.js" %}"></script>
+</body>
+</html>
